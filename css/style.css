@@ -1,0 +1,375 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+section {
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* Sección de presentación con imagen centrada */
+.presentacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #fff; /* Puedes cambiarlo luego si lo necesitas */
+}
+
+.imagen-presentacion {
+  max-width: 110%;
+  height: auto;
+  object-fit: contain;
+}
+.imagen-hoja {
+  max-width: 20%;
+  z-index: 7;
+  height: auto;
+  object-fit: contain;
+}
+.cuenta-regresiva {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f5f5dc; /* beige claro */
+}
+
+.titulo-cuenta {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-style: oblique;
+  color: #beb7be; /* verde olivo */
+  font-family: "Alex Brush", cursive;
+}
+
+.reloj {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.reloj div {
+  background-color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.reloj span {
+  display: block;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #847e86;
+}
+
+.reloj small {
+  font-size: 0.8rem;
+  color: #8db080;
+}
+
+.frase-cuenta {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: "Times New Roman", Times, serif;
+}
+.reproductor {
+  margin-top: 30px;
+  display: inline-block;
+  background-color: #ffffff;
+  border: 2px solid #687b46;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-cancion h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #575955;
+  font-weight: bold;
+}
+
+.info-cancion p {
+  margin: 5px 0 15px;
+  color: #444;
+  font-size: 16px;
+  font-style: italic;
+}
+
+audio {
+  width: 100%;
+  outline: none;
+  border-radius: 8px;
+}
+
+.padres-padrinos {
+  padding: 3rem .1rem;
+  text-align: center;
+  color: #333;
+  background-color: #dce3de; 
+}
+
+.marco-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 3vw 0;
+  box-sizing: border-box;
+}
+
+.marco-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.contenido-marco {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.003); /* sigue siendo transparente */
+  padding: 40px 30px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.titulo-padrinos {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.subtitulo-padrinos {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 22px;
+  color: #556b2f;
+  margin-bottom: 5px;
+}
+
+.nombre-padrinos {
+  font-family: "Alex Brush", cursive;
+  font-size: 21px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* ubicaciones*/
+.ubicaciones {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-color: #fdf9f6;
+}
+
+.titulo-ubicaciones {
+  font-family: "Times New Roman", serif;
+  font-size: 32px;
+  font-style: italic;
+  color: #29312c;
+  margin-bottom: 3rem;
+}
+
+.evento {
+  margin-bottom: 4rem;
+}
+
+.subtitulo-evento {
+  font-family: "Alex Brush", cursive;
+  font-size: 28px;
+  color: #547e4b;
+  margin-bottom: 10px;
+}
+
+.nombre-lugar {
+  font-family: "Times New Roman", serif;
+  font-size: 20px;
+  color: #6b6f6a;
+  margin-bottom: 10px;
+}
+
+.imagen-lugar {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+}
+
+.boton-mapa {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #90c084;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.boton-mapa:hover {
+  background-color: #b88e5c;
+}
+
+/* itinerario*/
+.itinerario {
+  padding: .1rem .1rem;
+  background-color: #b8b7b4;
+  text-align: center;
+}
+
+.titulo-itinerario {
+  font-family: "Times New Roman", serif;
+  font-size: 32px;
+  font-style: italic;
+  color: #5c4033;
+  margin-bottom: 2rem;
+}
+
+.imagen-itinerario {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+/* Animación inicial (oculta) */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Cuando se hace visible */
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* seccion final*/
+.seccion-final {
+  padding: 2rem .5rem;
+  background-color: #ececec;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contenedor-final {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.flor-izquierda, .flor-derecha {
+  width: 180px;
+  max-width: 40%;
+}
+
+.flor-izquierda {
+  align-self: flex-start;
+}
+
+.flor-derecha {
+  align-self: flex-end;
+}
+
+.contenido-final {
+  flex: 1 1 300px;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.titulo-final {
+  font-family: "Alex Brush", cursive;
+  color: rgb(106, 118, 111);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.mensaje-final {
+  font-size: 1.2rem;
+  font-family: "Times New Roman", serif;
+  font-style: italic;
+  padding: 0 1rem;
+}
+
+.boton-confirmar {
+  font-family: "Times New Roman", serif;
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #6fb98b;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.boton-confirmar:hover {
+  background-color: #7fb190;
+}
+
+.bienvenida {
+  background-color: #ffe4ec;
+  color: #a0335a;
+}
+
+.evento {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.ubicacion {
+  background-color: #fce3d4;
+  color: #5a3e2b;
+}
+
+.padrinos {
+  background-color: #f7f7f7;
+  color: #444;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}

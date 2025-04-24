@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitación de Allyson</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <section class="presentacion">
+    <img src="img/vestido.png" alt="Invitación de Mariana - Mis XV Años" class="imagen-presentacion fade-in-on-scroll" />
+    <img src="img/misxv.png" alt="Invitación de Mariana - Mis XV Años" class="imagen-presentacion fade-in-on-scroll" />
+  </section>
+  
+  <section class="cuenta-regresiva">
+    <h2 class="titulo-cuenta">Faltan...</h2>
+    <div class="reloj" id="countdown">
+      <div><span id="days">00</span><small>Días</small></div>
+      <div><span id="hours">00</span><small>Horas</small></div>
+      <div><span id="minutes">00</span><small>Minutos</small></div>
+      <div><span id="seconds">00</span><small>Segundos</small></div>
+    </div>
+    <h2 class="titulo-cuenta">Para el gran dia</h2>
+    <div class="reproductor fade-in-on-scroll">
+      <div class="info-cancion">
+        <h3>Die With a Smile</h3>
+        <p>Lady Gaga & Bruno Mars</p>
+      </div>
+      <audio id="audio" controls>
+        <source src="img/cancion.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+    </div>
+    <br>
+    <img src="img/hoja.webp" alt="Invitación de Mariana - Mis XV Años" class="imagen-hoja" />
+    <p class="frase-cuenta fade-in-on-scroll">"Hoy dejo atrás los juegos de niña para comenzar a escribir los sueños de una mujer. Gracias por ser parte de este capítulo tan especial en mi vida."</p>
+  </section>
+
+  <section class="padres-padrinos">
+    <div class="marco-wrapper">
+      <img src="img/marco.png" alt="Marco decorativo" class="marco-img">
+      
+      <div class="contenido-marco fade-in-on-scroll">
+        <h2 class="titulo-padrinos">Te invitamos en compañía de:</h2>
+  
+        <div class="grupo">
+          <h3 class="subtitulo-padrinos">Padres</h3>
+          <p class="nombre-padrinos">Clara Elizabeth Herrera</p>
+        </div>
+  
+        <div class="grupo">
+          <h3 class="subtitulo-padrinos">Padrinos</h3>
+          <span class="nombre-padrinos">Sostenes Herrera Placido</span>
+          <h3 class="subtitulo-padrinos">e</h3>
+          <p class="nombre-padrinos">Hilda Ramírez de Herrera</p>
+        </div>
+      </div>
+    </div>
+  
+    <br>
+    <img src="img/hoja.webp" alt="Invitación de Mariana - Mis XV Años" class="imagen-hoja" />
+    <h2 class="titulo-padrinos">Agenda la Fecha</h2>
+    <h3 class="subtitulo-padrinos">24 de Mayo</h3>
+  </section>
+  
+  
+  <section class="ubicaciones">
+    <h2 class="titulo-ubicaciones">Dónde celebrarás conmigo</h2>
+  
+    <!-- Ceremonia -->
+    <div class="evento">
+      <h3 class="subtitulo-evento">Ceremonia</h3>
+      <p class="nombre-lugar">Templo de Nuestra Señora de Guadalupe</p>
+      <p class="nombre-lugar">Guadalupe Santa Ana, Puebla</p>
+      <img src="img/iglesia.jpg" alt="Foto de la iglesia" class="imagen-lugar fade-in-on-scroll"><br>
+      <a href="https://maps.app.goo.gl/9SWk2as4mfMYLhXr5" target="_blank" class="boton-mapa">Ver en Google Maps</a>
+    </div>
+  
+    <!-- Recepción -->
+    <div class="evento">
+      <h3 class="subtitulo-evento">Recepción</h3>
+      <p class="nombre-lugar">Canchas Municipales</p>
+      <p class="nombre-lugar">Guadalupe Santa Ana, Puebla</p>
+      <img src="img/salon.png" alt="Foto del salón" class="imagen-lugar fade-in-on-scroll"><br>
+      
+      <a href="https://maps.app.goo.gl/NTkw46B5bT869hNW7" target="_blank" class="boton-mapa">Ver en Google Maps</a>
+    </div>
+  </section>
+
+  <section class="itinerario">
+    <img src="img/itine.png" alt="Itinerario del evento" class="imagen-itinerario fade-in-on-scroll">
+  </section>
+  
+  
+<section class="seccion-final fade-in-on-scroll">
+  <img src="img/flores.webp" alt="Flor izquierda" class="flor-izquierda" />
+
+  <div class="contenido-final">
+    <img src="img/wha.webp" alt="Flor derecha" width="40%"/><br>
+    <a href="https://wa.me/5212224568909?text=Hola%2C%20confirmo%20mi%20asistencia%20al%20evento.%20Gracias%20por%20invitarme%21"
+       target="_blank"
+       class="boton-confirmar">
+      Confirmar Asistencia
+    </a><br>
+    <h2 class="titulo-final">¡Te esperamos con mucho cariño!</h2>
+    <p class="mensaje-final">
+      Gracias por ser parte de este momento tan especial en mi vida.
+    </p>
+
+    
+  </div>
+
+  <img src="img/flores_derecha.png" alt="Flor derecha" class="flor-derecha" />
+</section>
+
+  
+  
+  
+
+</body>
+<script src="js/cuenta.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const faders = document.querySelectorAll('.fade-in-on-scroll');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-visible');
+        }
+      });
+    }, {
+      threshold: 0.15 // Aparece cuando el 30% es visible
+    });
+
+    faders.forEach(fader => observer.observe(fader));
+  });
+</script>
+
+</html>
