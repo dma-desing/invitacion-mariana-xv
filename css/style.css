@@ -9,6 +9,82 @@ body {
   scroll-behavior: smooth;
   line-height: 1.6;
 }
+/* Estilos generales del header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: "Alex Brush", cursive;
+  color: #6a8f7e;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.menu-toggle {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #888;
+}
+
+/* Responsive: mostrar menú como dropdown */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem 2rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+section {
+  scroll-margin-top: 80px;
+}
 
 section {
   min-height: 100vh;

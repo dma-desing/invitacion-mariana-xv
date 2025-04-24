@@ -11,13 +11,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
 
 </head>
+<header class="header">
+  <nav class="navbar">
+    <div class="logo">Mariana XV</div>
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#inicio">Mis XV</a></li>
+      <li><a href="#cuenta-regresiva">Cuenta Regresiva</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+      <li><a href="#itinerario">Itinerario</a></li>
+      <li><a href="#padrinos">Padres/Padrinos</a></li>
+      <li><a href="#final">Mensaje</a></li>
+    </ul>
+  </nav>
+</header>
+
 <body>
-  <section class="presentacion">
+  <section  id="inicio" class="presentacion">
     <img src="img/vestido.png" alt="Invitación de Mariana - Mis XV Años" class="imagen-presentacion fade-in-on-scroll" />
     <img src="img/misxv.png" alt="Invitación de Mariana - Mis XV Años" class="imagen-presentacion fade-in-on-scroll" />
   </section>
   
-  <section class="cuenta-regresiva">
+  <section id="cuenta-regresiva"class="cuenta-regresiva">
     <h2 class="titulo-cuenta">Faltan...</h2>
     <div class="reloj" id="countdown">
       <div><span id="days">00</span><small>Días</small></div>
@@ -41,7 +56,7 @@
     <p class="frase-cuenta fade-in-on-scroll">"Hoy dejo atrás los juegos de niña para comenzar a escribir los sueños de una mujer. Gracias por ser parte de este capítulo tan especial en mi vida."</p>
   </section>
 
-  <section class="padres-padrinos">
+  <section id="padrinos" class="padres-padrinos">
     <div class="marco-wrapper">
       <img src="img/marco.png" alt="Marco decorativo" class="marco-img">
       
@@ -69,7 +84,7 @@
   </section>
   
   
-  <section class="ubicaciones">
+  <section id="ubicacion" class="ubicaciones">
     <h2 class="titulo-ubicaciones">Dónde celebrarás conmigo</h2>
   
     <!-- Ceremonia -->
@@ -92,12 +107,12 @@
     </div>
   </section>
 
-  <section class="itinerario">
+  <section id="itinerario" class="itinerario">
     <img src="img/itine.png" alt="Itinerario del evento" class="imagen-itinerario fade-in-on-scroll">
   </section>
   
   
-<section class="seccion-final fade-in-on-scroll">
+<section id="final" class="seccion-final fade-in-on-scroll">
   <img src="img/flores.webp" alt="Flor izquierda" class="flor-izquierda" />
 
   <div class="contenido-final">
@@ -120,7 +135,22 @@
 
   
   
-  
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  // Cerrar menú al dar clic en un enlace
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+</script>
+
 
 </body>
 <script src="js/cuenta.js"></script>
