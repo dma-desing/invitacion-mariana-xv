@@ -238,7 +238,7 @@ audio {
 .titulo-padrinos {
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
-  font-size: 24px;
+  font-size: 22px;
   margin-top: 40px;
   margin-bottom: 5px;
   color: #444;
@@ -247,7 +247,7 @@ audio {
 .subtitulo-padrinos {
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
-  font-size: 22px;
+  font-size: 21px;
   color: #556b2f;
   margin-bottom: 0px;
 }
