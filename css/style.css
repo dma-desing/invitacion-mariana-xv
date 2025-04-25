@@ -258,7 +258,13 @@ audio {
   color: #333;
   margin-bottom: 20px;
 }
-
+.imagen-calendario {
+  width: 60%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+}
 /* ubicaciones*/
 .ubicaciones {
   padding: 4rem 1rem;
