@@ -228,7 +228,7 @@ audio {
   position: relative;
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.003); /* sigue siendo transparente */
-  padding: 40px 30px;
+  padding: 40px 20px;
   max-width: 600px;
   width: 100%;
   text-align: center;
